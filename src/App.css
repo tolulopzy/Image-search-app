@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  grid-template-columns: 1.5fr 5fr;
+}
+.sidebar {
+  height: 100rem;
+  border: solid 1px #dedddd;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  padding-left: 1.5rem;
+  padding-top: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  margin-bottom: 1.2rem;
+  color: #5c00ff;
+  padding: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.side-header {
+  margin-bottom: 1.2rem;
+  padding: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.side-btns {
+  margin-bottom: 1.2rem;
+  color: #7a7979;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.side-btns:hover {
+  border: solid 1px #dedddd;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  color: #242222;
+  margin-bottom: 1.2rem;
+}
+
+.side-icon:hover {
+  color: #5c00ff !important;
+}
+.searchbar{
+  border-radius: 4px;
+  border: 1px solid black;
+}
+.mainbar {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #7a7979;
+}
+
+.dropdown-section {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.dropdown {
+  padding: 0.5rem 1.5rem;
+  border: solid 0.5px #dedddd;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.picture-grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.image-container {
+  box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 56%);
+  height: 17rem;
+  width: 12rem;
+  margin-bottom: 1rem;
+}
+
+.image-grid {
+  width: 12rem;
+  height: 17rem;
+  border-radius: 0.4rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.image-text {
+  position: relative;
+  left: 2rem;
+  bottom: -13rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-name {
+  margin-bottom: 0.5rem;
 }
