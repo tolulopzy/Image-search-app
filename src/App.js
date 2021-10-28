@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faGlassCheers, faHome, faLink, faSearch, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faStickyNote } from '@fortawesome/free-solid-svg-icons';
-
 import img1 from './Images/img1.jpg';
 import img2 from './Images/img2.jpg';
+import img3 from './Images/img3.jpg';
+import img4 from './Images/img4.jpg';
+import img5 from './Images/img5.jpg';
+
 
 const getFilteredItems = (query, items) => {
   if (!query) {
@@ -31,36 +34,36 @@ function App() {
       <div className="sidebar">
         <h2 className="logo">Bluecube</h2>
         <p className="side-btns">
-        <FontAwesomeIcon icon={faStickyNote} /> Home
+        <FontAwesomeIcon icon={faHome} /> Home
         </p>
         <p className="side-btns">
-        <FontAwesomeIcon icon={faStickyNote} /> Home
+        <FontAwesomeIcon icon={faStickyNote} /> Message
         </p>
         <h5 className="side-header">SHARE</h5>
       <p className="side-btns">
-        <i class="fa fa-bar-chart side-icon" aria-hidden="true"></i> Ranking
+      <FontAwesomeIcon icon={faStickyNote} /> Ranking
       </p>
       <p className="side-btns">
-        <i class="fa fa-male side-icon" aria-hidden="true"></i>Party
+      <FontAwesomeIcon icon={faGlassCheers} />Party
       </p>
       <p className="side-btns">
-        <i class="fa fa-university side-icon" aria-hidden="true"></i>Challenge
+      <FontAwesomeIcon icon={faStickyNote} />Challenge
       </p>
       <p className="side-btns">
-        <i class="fa fa-connectdevelop side-icon" aria-hidden="true"></i>Connect
+      <FontAwesomeIcon icon={faLink} />Connect
       </p>
       <p className="side-btns">
-        <i class="fa fa-users side-icon" aria-hidden="true"></i> Parade
+      <FontAwesomeIcon icon={faStickyNote} /> Parade
       </p>
       <p className="side-btns">
-        <i class="fa fa-users side-icon" aria-hidden="true"></i> Group
+      <FontAwesomeIcon icon={faUsers} /> Group
       </p>
       </div>
       <div className="mainbar">
       <div className="search">
       <form className="search__form" onSubmit={handleFormSubmit}>
       <FontAwesomeIcon className="search__icon" icon={faSearch} />
-      <input className="search__input" name="search" type="text" placeholder="Find something..." onChange={e => {
+      <input className="search__input" name="search" type="text" placeholder="Find Something..." onChange={e => {
         handleChange(e)
         setQuery(e.target.value)}} />
         <button className="search__button" type="submit">Search</button>
@@ -89,7 +92,53 @@ function App() {
           Profession <FontAwesomeIcon icon={faChevronDown} />
         </p>
       </div>
-      
+      <div className="picture-grid-section">
+      <div className="inage-container">
+      <img className="image-grid" src={img1} alt="img1" />
+      <div className="image-text">
+      <h2 className="image-name">Tolulope, 16</h2>
+      <p>
+      <i className="fa fa-map-marker" aria-hidden="true"> </i> Lagos, Nigeria
+      </p>
+      </div>
+      </div>
+      <div className="inage-container">
+      <img className="image-grid" src={img2} alt="img2" />
+      <div className="image-text">
+      <h2 className="image-name">Tolulope, 16</h2>
+      <p>
+      <i className="fa fa-map-marker" aria-hidden="true"> </i> Lagos, Nigeria
+      </p>
+      </div>
+      </div>
+      <div className="inage-container">
+      <img className="image-grid" src={img3} alt="img3" />
+      <div className="image-text">
+      <h2 className="image-name">Tolulope, 16</h2>
+      <p>
+      <i className="fa fa-map-marker" aria-hidden="true"> </i> Lagos, Nigeria
+      </p>
+      </div>
+      </div>
+      <div className="inage-container">
+      <img className="image-grid" src={img4} alt="img4" />
+      <div className="image-text">
+      <h2 className="image-name">Tolulope, 16</h2>
+      <p>
+      <i className="fa fa-map-marker" aria-hidden="true"> </i> Lagos, Nigeria
+      </p>
+      </div>
+      </div>
+      <div className="inage-container">
+      <img className="image-grid" src={img5} alt="img5" />
+      <div className="image-text">
+      <h2 className="image-name">Tolulope, 16</h2>
+      <p>
+      <i className="fa fa-map-marker" aria-hidden="true"> </i> Lagos, Nigeria
+      </p>
+      </div>
+      </div>
+      </div>
       </div>
     </main>
 
